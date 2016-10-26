@@ -9,6 +9,8 @@ public class MainActivity extends AppCompatActivity {
 
     int scoreTeamA = 0;
     int scoreTeamB = 0;
+    int currentOutsTeamA = 0;
+    int getCurrentOutsTeamB = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Increase the score for Team A by 1 point.
      */
-    public void addOneForTeamA(View v) {
+    public void runForTeamA(View v) {
         scoreTeamA++;
         displayForTeamA(scoreTeamA);
     }
@@ -33,23 +35,23 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Increase the score for Team A by 2 points.
      */
-    public void addTwoForTeamA(View v) {
-        scoreTeamA = scoreTeamA + 2;
+    public void outForTeamA(View v) {
+        currentOutsTeamA++;
         displayForTeamA(scoreTeamA);
     }
 
     /**
      * Increase the score for Team A by 3 points.
      */
-    public void addThreeForTeamA(View v) {
-        scoreTeamA = scoreTeamA + 3;
+    public void grandSlamForTeamA(View v) {
+        scoreTeamA = scoreTeamA + 4;
         displayForTeamA(scoreTeamA);
     }
 
     /**
      * Increase the score for Team A by 1 point.
      */
-    public void addOneForTeamB(View v) {
+    public void runForTeamB(View v) {
         scoreTeamB++;
         displayForTeamB(scoreTeamB);
     }
@@ -57,16 +59,16 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Increase the score for Team A by 2 points.
      */
-    public void addTwoForTeamB(View v) {
-        scoreTeamB = scoreTeamB + 2;
+    public void outForTeamB(View v) {
+        getCurrentOutsTeamB++;
         displayForTeamB(scoreTeamB);
     }
 
     /**
      * Increase the score for Team A by 3 points.
      */
-    public void addThreeForTeamB(View v) {
-        scoreTeamB = scoreTeamB + 3;
+    public void grandSlamForTeamB(View v) {
+        scoreTeamB = scoreTeamB + 4;
         displayForTeamB(scoreTeamB);
     }
 
