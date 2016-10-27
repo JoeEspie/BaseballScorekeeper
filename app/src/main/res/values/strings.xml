@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">BaseballScorekeeper</string>
+    <string name="grand_slam">Grand Slam!</string>
+    <string name="run">Run Scored</string>
+    <string name="initial_value">0</string>
+    <string name="team_a">Team A</string>
+    <string name="team_b">Team B</string>
+    <string name="outs">Outs</string>
+    <string name="initial_batting_state">Team A is Batting</string>
+    <string name="out_button">Player Out</string>
+    <string name="switch_batting_state">Switch Roles</string>
+    <string name="reset_button">Reset</string>
 </resources>

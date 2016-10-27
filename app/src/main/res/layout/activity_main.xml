@@ -5,55 +5,38 @@
 
     <LinearLayout
         android:id="@+id/counter"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:orientation="horizontal">
+        style="@style/row"
+        android:layout_marginBottom="8dp">
 
         <LinearLayout
             android:id="@+id/teamA"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            style="@style/column">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center"
+                style="@style/BasicStyle"
                 android:padding="16dp"
-                android:text="Team A"
-                android:textColor="#616161"
-                android:textSize="14sp" />
+                android:text="@string/team_a" />
 
             <TextView
                 android:id="@+id/team_a_score"
+                style="@style/largeNumber"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
                 android:gravity="center"
                 android:paddingBottom="8dp"
-                android:text="0"
-                android:textColor="#000000"
-                android:textSize="56sp" />
+                android:text="@string/initial_value" />
 
             <Button
+                style="@style/typicalButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:onClick="grandSlamForTeamA"
-                android:text="Grand Slam!" />
+                android:onClick="runForTeamA"
+                android:text="@string/run" />
 
             <Button
+                style="@style/typicalButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:onClick="runForTeamA"
-                android:text="Run Scored" />
+                android:onClick="grandSlamForTeamA"
+                android:text="@string/grand_slam" />
 
         </LinearLayout>
 
@@ -65,48 +48,33 @@
 
         <LinearLayout
             android:id="@+id/teamB"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            style="@style/column">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center"
+                style="@style/BasicStyle"
                 android:padding="16dp"
-                android:text="Team B"
-                android:textColor="#616161"
-                android:textSize="14sp" />
+                android:text="@string/team_b" />
 
             <TextView
                 android:id="@+id/team_b_score"
+                style="@style/largeNumber"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
                 android:gravity="center"
                 android:paddingBottom="8dp"
-                android:text="0"
-                android:textColor="#000000"
-                android:textSize="56sp" />
+                android:text="@string/initial_value" />
 
             <Button
+                style="@style/typicalButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:onClick="grandSlamForTeamB"
-                android:text="Grand Slam!" />
+                android:onClick="runForTeamB"
+                android:text="@string/run" />
 
             <Button
+                style="@style/typicalButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:onClick="runForTeamB"
-                android:text="Run Scored" />
+                android:onClick="grandSlamForTeamB"
+                android:text="@string/grand_slam" />
 
         </LinearLayout>
 
@@ -114,15 +82,12 @@
 
     <TextView
         android:id="@+id/numberOuts"
+        style="@style/largeNumber"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_below="@id/counter"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="8dp"
-        android:fontFamily="sans-serif-light"
-        android:text="0"
-        android:textColor="#000000"
-        android:textSize="56dp" />
+        android:text="@string/initial_value" />
 
     <View
         android:layout_width="match_parent"
@@ -133,14 +98,10 @@
 
     <TextView
         android:id="@+id/outs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/BasicStyle"
         android:layout_below="@id/numberOuts"
         android:layout_centerHorizontal="true"
-        android:fontFamily="sans-serif-medium"
-        android:text="Outs"
-        android:textColor="#616161"
-        android:textSize="14sp" />
+        android:text="@string/outs" />
 
     <TextView
         android:id="@+id/battingState"
@@ -150,43 +111,37 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Team A is batting"
+        android:text="@string/initial_batting_state"
         android:textColor="#000000"
         android:textSize="24sp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/battingState"
         android:layout_centerHorizontal="true"
         android:layout_margin="8dp"
-        android:layout_below="@id/battingState"
         android:onClick="out"
-        android:text="Out" />
+        android:text="@string/out_button" />
 
     <LinearLayout
         android:id="@+id/bottomButtons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal">
+        style="@style/row"
+        android:layout_alignParentBottom="true">
 
         <Button
+            style="@style/typicalButton"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
             android:layout_weight="1"
             android:onClick="setBattingState"
-            android:text="Switch Roles" />
+            android:text="@string/switch_batting_state" />
 
         <Button
+            style="@style/typicalButton"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
             android:layout_weight="1"
             android:onClick="resetScores"
-            android:text="reset" />
+            android:text="@string/reset_button" />
 
     </LinearLayout>
 
